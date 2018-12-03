@@ -34,7 +34,7 @@ class Disco:
 		self.__filaespera = list(map(int,filaespera.split()))
 
 	def __str__(self):
-		return "{}\n{}\n{}\n".format(self.pinicial,self.tfilaespera," ".join(self.filaespera))
+		return "DISCO: \n{}\n{}\n{}\n".format(self.pinicial,self.tfilaespera," ".join(map(str,self.filaespera)))
 		
 class Escalonamento:
 	def __init__(self, disco, extremities=(0,199)):
@@ -120,6 +120,7 @@ class Escalonamento:
 
 def main():
 	d = Disco(input("Caminho do arquivo: "))
+	print(d)
 	esc = Escalonamento(d)
 	print(esc)
 
